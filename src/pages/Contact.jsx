@@ -1,0 +1,69 @@
+import React from "react";
+
+import {
+    PlayCircle,
+    Disc3,
+    Mic2,
+    Mail,
+    Instagram,
+    Twitter,
+  } from "lucide-react";
+
+const Contact = () => {
+  return (
+    <section id="contact" className="bg-gray-900 py-20">
+    <div className="container mx-auto px-4">
+      <h2 className="text-3xl font-bold mb-8 text-center">Get in Touch</h2>
+      <div className="max-w-md mx-auto">
+        <form className="space-y-4">
+          <input
+            className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+            placeholder="Your Name"
+            type="text"
+          ></input>
+          <input
+            className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+            placeholder="Your email"
+            type="email"
+          ></input>
+          <textarea
+            className="flex min-h-[80px] w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+            placeholder="Message"
+          ></textarea>
+          <button className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 text-primary-foreground h-10 px-4 py-2 w-full bg-purple-600 hover:bg-purple-700">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-mail mr-2 h-4 w-4"
+            >
+              <rect width="20" height="16" x="2" y="4" rx="2"></rect>
+              <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+            </svg>
+            Send Message
+          </button>
+        </form>
+      </div>
+      <div className="mt-12 text-center">
+        <h3 className="text-xl font-semibold mb-4">Follow Me</h3>
+        <div className="flex justify-center space-x-4">
+          <a href="#" className="hover:text-purple-400">
+            <Instagram size={24} />
+          </a>
+          <a href="#" className="hover:text-purple-400">
+            <Twitter size={24} />
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+  )
+};
+
+export default Contact;

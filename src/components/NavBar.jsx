@@ -1,5 +1,6 @@
 import React from "react";
 
+
 const NavBar = () => {
   return (
     <header className="container mx-auto px-4 py-6 flex justify-between items-center">
@@ -12,8 +13,13 @@ const NavBar = () => {
             </a>
           </li>
           <li>
-            <a href="#works" className="hover:text-gray-300">
-              Works
+            <a href="#films" className="hover:text-gray-300">
+              Films
+            </a>
+          </li>
+          <li>
+            <a href="#about" className="hover:text-gray-300">
+              About
             </a>
           </li>
           <li>
