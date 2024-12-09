@@ -3,9 +3,9 @@ import { PlayCircle, Disc3, Mic2, Mail } from "lucide-react";
 
 const Trailers = () => {
   const projects = [
-    { id: 1, title: "Project Alpha", description: "A groundbreaking project.", imgUrl: "/public/fotos/estudio.jpg"},
+    { id: 1, title: "Project Alpha", description: "A groundbreaking project.", imgUrl: "/fotos/estudio.jpg"},
     { id: 2, title: "Project Beta", description: "An innovative solution.", imgUrl: "/public/fotos/fran_bateria.jpg" },
-    { id: 3, title: "Project Gamma", description: "A revolutionary idea.", imgUrl: "/public/fotos/estudio.jpg" },
+    { id: 3, title: "Project Gamma", description: "A revolutionary idea.", imgUrl: "/fotos/estudio.jpg" },
   ];
 
   return (

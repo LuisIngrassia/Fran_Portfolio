@@ -19,17 +19,17 @@ const Contact = () => {
       <div className="max-w-md mx-auto">
         <form className="space-y-4">
           <input
-            className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+            className="text-black flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
             placeholder="Your Name"
             type="text"
           ></input>
           <input
-            className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+            className="text-black  flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
             placeholder="Your email"
             type="email"
           ></input>
           <textarea
-            className="flex min-h-[80px] w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+            className="text-black flex min-h-[80px] w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
             placeholder="Message"
           ></textarea>
           <button className="text-black inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 text-primary-foreground h-10 px-4 py-2 w-full bg-[#e6d227] hover:bg-[#e53c51]">
@@ -58,10 +58,10 @@ const Contact = () => {
           <a href="https://www.instagram.com/fran_cuatto?igsh=YWdiN2l5dzN5Mzll" className="hover:text-[#e6d227]" target="_blank" rel="noopener noreferrer">
             <Instagram size={24} />
           </a>
-          <a href="#" className="hover:text-[#e6d227]" target="_blank" rel="noopener noreferrer">
+          <a href="https://www.linkedin.com/in/franco-cuatto-988575184?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" className="hover:text-[#e6d227]" target="_blank" rel="noopener noreferrer">
             <Linkedin size={24} />
           </a>
-          <a href="#" className="hover:text-[#e6d227]" target="_blank" rel="noopener noreferrer">
+          <a href="https://www.facebook.com/share/bjs1dBT3iq7a1fAY/?mibextid=LQQJ4d" className="hover:text-[#e6d227]" target="_blank" rel="noopener noreferrer">
             <Facebook size={24} />
           </a>
         </div>
