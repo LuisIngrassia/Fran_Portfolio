@@ -12,7 +12,7 @@ const About = () => {
           />
         </div>
         <div className="md:w-1/2">
-          <h2 className="text-3xl font-bold mb-4 px-8">About Me</h2>
+          <h2 className="text-3xl font-bold mb-4 px-8 text-[#e6d227]">About Me</h2>
           <p className="mb-4 px-8">
           Hi! I'm Franco Cuatto, a passionate cinematic music producer dedicated to creating unforgettable soundscapes that bring stories to life. 
           With a deep love for storytelling and a profound understanding of music's emotional impact, I specialize in composing and producing 

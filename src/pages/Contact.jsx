@@ -15,7 +15,7 @@ const Contact = () => {
   return (
     <section id="contact" className="bg-[#0c0f0f] py-20">
     <div className="container mx-auto px-4">
-      <h2 className="text-3xl font-bold mb-8 text-center">Get in Touch</h2>
+      <h2 className="text-3xl font-bold mb-8 text-center text-[#e6d227]">Get in Touch</h2>
       <div className="max-w-md mx-auto">
         <form className="space-y-4">
           <input
@@ -53,7 +53,7 @@ const Contact = () => {
         </form>
       </div>
       <div className="mt-12 text-center">
-        <h3 className="text-xl font-semibold mb-4">Follow Me</h3>
+        <h3 className="text-xl font-semibold mb-4 text-[#e6d227]">Follow Me</h3>
         <div className="flex justify-center space-x-4">
           <a href="https://www.instagram.com/fran_cuatto?igsh=YWdiN2l5dzN5Mzll" className="hover:text-[#e6d227]" target="_blank" rel="noopener noreferrer">
             <Instagram size={24} />

@@ -4,7 +4,7 @@ import {Eye} from "lucide-react";
 const Sections = () => {
     const ramas = [
         { id: 1, title: "Filmscoring", description: "The art of creating music that enhances emotions. The key to making stories felt, lived, and remembered forever.", imgUrl: "/public/sections/filmscoring.jpg", hacia:"Filmscoring"},
-        { id: 2, title: "Commercials", description: "A powerful tool to communicate emotions, reinforce messages, and connect with whoever you aim to reach.", imgUrl: "/public/sections/commercials.jpg", hacia:"Commercials"},
+        { id: 2, title: "Sound Desing", description: "A powerful tool to communicate emotions, reinforce messages, and connect with whoever you aim to reach.", imgUrl: "/public/sections/Sound_desing.jpg", hacia:"Commercials"},
         { id: 3, title: "Compositions", description: "The creation of something unique and unrepeatable.", imgUrl: "/public/sections/compo.jpeg", hacia:"Compositions" },
         { id: 4, title: "Mix & Mastering", description: "The final touch to ensure your project sounds professional and polished, enhancing and elevating your unique creation.", imgUrl: "/public/fotos/estudio.jpg", hacia:"Mastering" },
       ];
@@ -17,7 +17,9 @@ const Sections = () => {
     </h2>
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
       {ramas.map((section) => (
-        <div key={section.id} className="bg-gray-800 rounded-lg overflow-hidden flex flex-col h-full">
+        <div className="relative group"> 
+          <div className="absolute blur transition duration-1000 group-hover:duration-200 opacity-0 group-hover:opacity-50 inset-0 bg-[#e6d227] rounded-lg"></div>
+        <div key={section.id} className="relative bg-gray-800 rounded-lg overflow-hidden flex flex-col h-full hover:text-[#e6d227]">
           <img
             src={section.imgUrl}
             alt={section.title}
@@ -41,6 +43,7 @@ const Sections = () => {
             </button>
             </a>
           </div>
+        </div>
         </div>
       ))}
     </div>
