@@ -1,14 +1,13 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Home from "./pages/Home";
-import Filmscoring from "./pages/sections/Filmscoring";
-
+import SectionsView from "./pages/sections/SectionsView";
 
 function App() {
   return (
     <Router>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/filmscoring" element={<Filmscoring />} />
+        <Route path="/sections" element={<SectionsView />} />
       </Routes>
     </Router>
   );

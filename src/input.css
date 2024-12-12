@@ -1,3 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Estilo para los dots del slider */
+.slick-dots li button:before {
+  color: white !important; /* Cambia todos los dots a blanco */
+}
+
+/* Estilo para el dot activo */
+.slick-dots li.slick-active button:before {
+  color: #e6d227 !important; /* Cambia el dot activo al color #e6d227 */
+}
