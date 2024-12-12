@@ -1,0 +1,35 @@
+export const film = [
+  {
+    id: 1,
+    title: "Desde La Raíz",
+    artist: "Liminal Prod.",
+    producers: "Franco Cuatto",
+    type: "Trailer",
+    coverImage: "../sections/film/desde_la_raiz.JPG",
+    goto: "https://drive.google.com/file/d/1UEsiPXVZqiMd3ipwU9LbniJMjj-ikypA/view",
+  },
+  {
+    id: 2,
+    title: "film2",
+    artist: "El Pulsador",
+    producers: "Franco Cuatto",
+    type: "Trailer",
+    coverImage: "../fotos/estudio.jpg",
+  },
+  {
+    id: 3,
+    title: "film3",
+    artist: "Nebulosa Sonora",
+    producers: "Franco Cuatto",
+    type: "Trailer",
+    coverImage: "../fotos/estudio.jpg",
+  },
+  {
+    id: 4,
+    title: "film4",
+    artist: "Ecos del Bosque",
+    producers: "Franco Cuatto",
+    type: "Trailer",
+    coverImage: "../fotos/estudio.jpg",
+  },
+];

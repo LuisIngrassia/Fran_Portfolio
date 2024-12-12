@@ -4,26 +4,26 @@ const Sections = () => {
   const ramas = [
     {
       id: 1,
-      title: "Filmscoring",
+      title: "Film Scoring",
       description:
         "The art of creating music that enhances emotions. The key to making stories felt, lived, and remembered forever.",
       imgUrl: "/sections/filmscoring.jpg",
-      hacia: "sections",
+      hacia: "sections#film",
     },
     {
       id: 2,
-      title: "Sound Desing",
+      title: "Sound Design",
       description:
         "A powerful tool to communicate emotions, reinforce messages, and connect with whoever you aim to reach.",
-      imgUrl: "/sections/Sound_desing.jpg",
-      hacia: "sections",
+      imgUrl: "/sections/sound_design.jpg",
+      hacia: "/sections#sound",
     },
     {
       id: 3,
       title: "Compositions",
       description: "The creation of something unique and unrepeatable.",
       imgUrl: "/sections/compo.jpeg",
-      hacia: "sections",
+      hacia: "sections#compositions",
     },
     {
       id: 4,
@@ -31,7 +31,7 @@ const Sections = () => {
       description:
         "The final touch to ensure your project sounds professional and polished, enhancing and elevating your unique creation.",
       imgUrl: "/fotos/estudio.jpg",
-      hacia: "sections",
+      hacia: "sections#mastering",
     },
   ];
 
@@ -45,21 +45,21 @@ const Sections = () => {
           {ramas.map((section) => (
             <div key={section.id} className="group relative">
               {/* {section.id} */}
-              <div className="absolute inset-0 rounded-lg bg-[#e6d227] opacity-0 blur transition duration-1000 group-hover:opacity-50 group-hover:duration-200"></div>
-              <div className="relative flex h-full flex-col overflow-hidden rounded-lg bg-gray-800 hover:text-[#e6d227]">
-                <img
-                  src={section.imgUrl}
-                  alt={section.title}
-                  className="h-48 w-full object-cover"
-                />
-                <div className="flex-grow p-4">
-                  <h3 className="mb-2 text-xl font-semibold">
-                    {section.title}
-                  </h3>
-                  <p className="mb-4 text-gray-400">{section.description}</p>
-                </div>
-                <div className="p-4">
-                  <a href={section.hacia}>
+              <a href={section.hacia}>
+                <div className="absolute inset-0 rounded-lg bg-[#e6d227] opacity-0 blur transition duration-1000 group-hover:opacity-50 group-hover:duration-200"></div>
+                <div className="relative flex h-full flex-col overflow-hidden rounded-lg bg-gray-800 hover:text-[#e6d227]">
+                  <img
+                    src={section.imgUrl}
+                    alt={section.title}
+                    className="h-48 w-full object-cover"
+                  />
+                  <div className="flex-grow p-4">
+                    <h3 className="mb-2 text-xl font-semibold">
+                      {section.title}
+                    </h3>
+                    <p className="mb-4 text-gray-400">{section.description}</p>
+                  </div>
+                  <div className="p-4">
                     <button className="ring-offset-background focus-visible:ring-ring border-input inline-flex h-9 items-center justify-center gap-2 whitespace-nowrap rounded-md border bg-[#0c0f0f] px-3 text-sm font-medium transition-colors hover:bg-[#e6d227] hover:text-black focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -78,9 +78,9 @@ const Sections = () => {
                       </svg>
                       View now
                     </button>
-                  </a>
+                  </div>
                 </div>
-              </div>
+              </a>
             </div>
           ))}
         </div>
