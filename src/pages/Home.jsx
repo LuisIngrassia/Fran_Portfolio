@@ -19,7 +19,7 @@ const Home = () => {
         <div className="absolute inset-0 bg-black opacity-50"></div>
         <div className="relative z-10 flex h-full items-center justify-center text-center">
           <h1 className="select-none text-5xl font-bold text-[#e6d227]">
-            Musical Producer
+            Filmscoring Producer
           </h1>
         </div>
       </section>

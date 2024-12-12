@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import Slider from "react-slick";
-import { Music, Mic2, Disc3, Film } from "lucide-react";
+import { Music, Mic2, Disc3, Film, Calendar } from "lucide-react";
 import NavBar from "../../components/NavBar";
 import Footer from "../../components/Footer";
 import { HashLink } from "react-router-hash-link"; // Importar HashLink
@@ -96,16 +96,16 @@ function SectionsView() {
   };
 
   return (
-    <section className="flex min-h-screen select-none flex-col items-start justify-start bg-[#0c0f0f] pt-16">
+    <section className="flex min-h-screen flex-col items-start justify-start bg-[#0c0f0f] pt-16">
       <NavBar />
-      <div className="mt-6 w-full flex-1 p-4 px-12">
+      <div className="mt-6 w-full flex-1 select-none p-4 px-12">
         <div className="relative my-6">
           <div className="relative flex justify-start py-2 text-lg text-white">
             {[
               { label: "Film Scoring", value: "film" },
               { label: "Sound Design", value: "sound" },
               { label: "Compositions", value: "compositions" },
-              { label: "Mastering", value: "mastering" },
+              { label: "Mix & Mastering", value: "mastering" },
             ].map(({ label, value }, index) => (
               <HashLink
                 key={value}
@@ -131,7 +131,7 @@ function SectionsView() {
                   <img
                     src={project.coverImage}
                     alt={`Portada de ${project.title}`}
-                    className="h-48 w-full object-cover"
+                    className="h-52 w-full object-cover"
                   />
                   <div className="p-4">
                     <h3 className="mb-2 text-lg font-semibold">
@@ -145,9 +145,19 @@ function SectionsView() {
                       <Disc3 className="mr-2 h-4 w-4" />
                       <span>{project.producers}</span>
                     </div>
-                    <div className="mb-4 flex items-center">
-                      <Film className="mr-2 h-4 w-4" />
-                      <span>{project.type}</span>
+                    <div>
+                      {project.type && (
+                        <div className="mb-4 flex items-center">
+                          <Film className="mr-2 h-4 w-4" />
+                          <span>{project.type}</span>
+                        </div>
+                      )}
+                      {project.releaseDate && (
+                        <div className="mb-4 flex items-center">
+                          <Calendar className="mr-2 h-4 w-4" />
+                          <span>{project.releaseDate}</span>
+                        </div>
+                      )}
                     </div>
                     <button className="ring-offset-background focus-visible:ring-ring border-input inline-flex h-9 items-center justify-center gap-2 whitespace-nowrap rounded-md border bg-[#0c0f0f] px-3 text-sm font-medium text-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 group-hover:bg-[#e6d227] group-hover:text-black [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0">
                       <Music className="mr-2 h-4 w-4" />
