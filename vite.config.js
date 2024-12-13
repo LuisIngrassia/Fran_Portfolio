@@ -9,4 +9,8 @@ export default defineConfig({
       "@": path.resolve(__dirname, "./src"), // Configura @ como alias para src
     },
   },
+  server: {
+    host: true, // Permite accesos externos
+    port: 5173, // Asegúrate de que el puerto sea accesible
+  },
 });

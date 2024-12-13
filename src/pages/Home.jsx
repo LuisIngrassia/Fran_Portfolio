@@ -18,7 +18,7 @@ const Home = () => {
       >
         <div className="absolute inset-0 bg-black opacity-50"></div>
         <div className="relative z-10 flex h-full items-center justify-center text-center">
-          <h1 className="select-none text-5xl font-bold text-[#e6d227]">
+          <h1 className="select-none font-serif text-6xl font-bold italic text-[#e6d227]">
             Filmscoring Producer
           </h1>
         </div>

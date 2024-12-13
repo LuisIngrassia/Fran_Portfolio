@@ -12,12 +12,14 @@ const About = () => {
             About Me
           </h2>
           <p className="mb-4 px-8">
-            Hi! I'm Franco Cuatto, a passionate cinematic music producer
-            dedicated to creating unforgettable soundscapes that bring stories
-            to life. With a deep love for storytelling and a profound
-            understanding of music's emotional impact, I specialize in composing
-            and producing scores that resonate with audiences and enhance the
-            narrative experience.
+            Hi! I’m Fran, a passionate film-scoring composer dedicated to
+            crafting unforgettable musical experiences for the screen. With a
+            strong foundation in cinematic music and a deep love for
+            storytelling, I’m currently pursuing a degree in Film Scoring and
+            Music Production at UCA (Universidad Católica Argentina). I
+            specialize in creating scores that bring characters, emotions, and
+            narratives to life, enhancing every visual journey with unique and
+            captivating sounds.
           </p>
         </div>
       </div>
