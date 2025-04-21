@@ -24,6 +24,6 @@ export const film = [
     producers: "Franco Cuatto",
     type: "Short Film",
     coverImage: "../sections/film/happiness.jpeg",
-    goto: "https://drive.google.com/file/d/1DgQYnsCEiMKPAAlOs7saFRTxoCC8YzAD/view",
+    goto: "https://drive.google.com/file/d/170mrx_nf_M-AruRE_r9ctk3ZoybuQIIy/view",
   },
 ];
