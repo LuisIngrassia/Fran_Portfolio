@@ -1,6 +1,15 @@
 export const sound = [
   {
     id: 1,
+    title: "The wall",
+    artist: "",
+    producers: "Franco Cuatto",
+    type: "Short Film",
+    coverImage: "../sections/sound/wall.png",
+    goto: "https://drive.google.com/file/d/1XhDRvUjY8K13xNt1jCNCjfWf47oWOezI/view",
+  },
+  {
+    id: 2,
     title: "Happiness",
     artist: "Short Film Remake",
     producers: "Franco Cuatto",
@@ -9,7 +18,7 @@ export const sound = [
     goto: "https://drive.google.com/file/d/1DgQYnsCEiMKPAAlOs7saFRTxoCC8YzAD/view",
   },
   {
-    id: 2,
+    id: 3,
     title: "Florida Project Remake",
     artist: "Franco Cuatto",
     producers: "Franco Cuatto ft. Justina Deverill, Alejo Miragaya",

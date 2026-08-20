@@ -10,6 +10,7 @@ import { film } from "./data/film";
 import { compositions } from "./data/compositions";
 import { mastering } from "./data/mastering";
 import { sound } from "./data/sound";
+import { session } from "./data/session";
 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -21,17 +22,31 @@ function SectionsView() {
   const containerRef = useRef(null);
   const location = useLocation(); // Para capturar el hash de la URL
 
+  const projectData = {
+    film,
+    compositions,
+    mastering,
+    sound,
+    session,
+  };
+
+  const currentProjects = projectData[activeSection] || [];
+  const DESKTOP_SLIDES = 3;
+  const TABLET_SLIDES = 2;
+  const needsCarousel = currentProjects.length > DESKTOP_SLIDES;
+
   const settings = {
     dots: true,
+    arrows: true,
     infinite: true,
     speed: 500,
-    slidesToShow: 3,
+    slidesToShow: DESKTOP_SLIDES,
     slidesToScroll: 1,
     responsive: [
       {
         breakpoint: 1024,
         settings: {
-          slidesToShow: 2,
+          slidesToShow: TABLET_SLIDES,
           slidesToScroll: 1,
         },
       },
@@ -45,25 +60,61 @@ function SectionsView() {
     ],
   };
 
-  const projectData = {
-    film,
-    compositions,
-    mastering,
-    sound,
-  };
+  const renderProjectCard = (project) => (
+    <div key={project.id} className="group px-2">
+      <a href={project.goto} target="_blank">
+        <div className="overflow-hidden rounded-lg bg-[#1F2937] text-white shadow-md transition-colors group-hover:text-[#e6d227]">
+          <img
+            src={project.coverImage}
+            alt={`Portada de ${project.title}`}
+            className="h-52 w-full object-cover"
+          />
+          <div className="p-4">
+            <h3 className="mb-2 text-lg font-semibold">{project.title}</h3>
+            <div className="mb-2 flex items-center">
+              <Mic2 className="mr-2 h-4 w-4" />
+              <span>{project.artist}</span>
+            </div>
+            <div className="mb-2 flex items-center">
+              <Disc3 className="mr-2 h-4 w-4" />
+              <span>{project.producers}</span>
+            </div>
+            <div>
+              {project.type && (
+                <div className="mb-4 flex items-center">
+                  <Film className="mr-2 h-4 w-4" />
+                  <span>{project.type}</span>
+                </div>
+              )}
+              {project.releaseDate && (
+                <div className="mb-4 flex items-center">
+                  <Calendar className="mr-2 h-4 w-4" />
+                  <span>{project.releaseDate}</span>
+                </div>
+              )}
+            </div>
+            <button className="ring-offset-background focus-visible:ring-ring border-input inline-flex h-9 items-center justify-center gap-2 whitespace-nowrap rounded-md border bg-[#0c0f0f] px-3 text-sm font-medium text-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 group-hover:bg-[#e6d227] group-hover:text-black [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0">
+              <Music className="mr-2 h-4 w-4" />
+              Listen Now
+            </button>
+          </div>
+        </div>
+      </a>
+    </div>
+  );
 
   // Detecta cambios en el hash y actualiza el activeSection
   useEffect(() => {
     const sectionFromHash = location.hash.replace("#", "");
     if (
-      ["film", "sound", "compositions", "mastering"].includes(sectionFromHash)
+      ["film", "sound", "compositions", "mastering", "session"].includes(sectionFromHash)
     ) {
       setActiveSection(sectionFromHash);
     }
   }, [location.hash]); // Reaccionar cuando cambia el hash de la URL
 
   const updateUnderline = () => {
-    const activeIndex = ["film", "sound", "compositions", "mastering"].indexOf(
+    const activeIndex = ["film", "sound", "compositions", "mastering", "session"].indexOf(
       activeSection,
     );
 
@@ -106,6 +157,7 @@ function SectionsView() {
               { label: "Sound Design", value: "sound" },
               { label: "Compositions", value: "compositions" },
               { label: "Mix & Mastering", value: "mastering" },
+              { label: "Sessionist", value: "session" },
             ].map(({ label, value }, index) => (
               <HashLink
                 key={value}
@@ -123,52 +175,15 @@ function SectionsView() {
             ></div>
           </div>
         </div>
-        <Slider {...settings}>
-          {projectData[activeSection].map((project) => (
-            <div key={project.id} className="group px-2">
-              <a href={project.goto} target="_blank">
-                <div className="overflow-hidden rounded-lg bg-[#1F2937] text-white shadow-md transition-colors group-hover:text-[#e6d227]">
-                  <img
-                    src={project.coverImage}
-                    alt={`Portada de ${project.title}`}
-                    className="h-52 w-full object-cover"
-                  />
-                  <div className="p-4">
-                    <h3 className="mb-2 text-lg font-semibold">
-                      {project.title}
-                    </h3>
-                    <div className="mb-2 flex items-center">
-                      <Mic2 className="mr-2 h-4 w-4" />
-                      <span>{project.artist}</span>
-                    </div>
-                    <div className="mb-2 flex items-center">
-                      <Disc3 className="mr-2 h-4 w-4" />
-                      <span>{project.producers}</span>
-                    </div>
-                    <div>
-                      {project.type && (
-                        <div className="mb-4 flex items-center">
-                          <Film className="mr-2 h-4 w-4" />
-                          <span>{project.type}</span>
-                        </div>
-                      )}
-                      {project.releaseDate && (
-                        <div className="mb-4 flex items-center">
-                          <Calendar className="mr-2 h-4 w-4" />
-                          <span>{project.releaseDate}</span>
-                        </div>
-                      )}
-                    </div>
-                    <button className="ring-offset-background focus-visible:ring-ring border-input inline-flex h-9 items-center justify-center gap-2 whitespace-nowrap rounded-md border bg-[#0c0f0f] px-3 text-sm font-medium text-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 group-hover:bg-[#e6d227] group-hover:text-black [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0">
-                      <Music className="mr-2 h-4 w-4" />
-                      Listen Now
-                    </button>
-                  </div>
-                </div>
-              </a>
-            </div>
-          ))}
-        </Slider>
+        {needsCarousel ? (
+          <Slider key={activeSection} {...settings}>
+            {currentProjects.map(renderProjectCard)}
+          </Slider>
+        ) : (
+          <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
+            {currentProjects.map(renderProjectCard)}
+          </div>
+        )}
       </div>
       <Footer />
     </section>

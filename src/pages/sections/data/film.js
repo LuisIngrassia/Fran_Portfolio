@@ -1,6 +1,24 @@
 export const film = [
   {
     id: 1,
+    title: "Love & Death",
+    artist: "",
+    producers: "Franco Cuatto",
+    type: "Opening Credits",
+    coverImage: "../sections/film/lovedeath.png",
+    goto: "https://www.youtube.com/watch?v=DZH90wvjWDo",
+  },
+  {
+    id: 2,
+    title: "The wall",
+    artist: "",
+    producers: "Franco Cuatto",
+    type: "Short Film",
+    coverImage: "../sections/sound/wall.png",
+    goto: "https://drive.google.com/file/d/1XhDRvUjY8K13xNt1jCNCjfWf47oWOezI/view",
+  },
+  {
+    id: 3,
     title: "Desde La Raíz",
     artist: "Liminal Prod.",
     producers: "Franco Cuatto",
@@ -9,7 +27,7 @@ export const film = [
     goto: "https://drive.google.com/file/d/1UEsiPXVZqiMd3ipwU9LbniJMjj-ikypA/view",
   },
   {
-    id: 2,
+    id: 4,
     title: "Desde La Raíz",
     artist: "Liminal Prod.",
     producers: "Franco Cuatto",
@@ -18,12 +36,12 @@ export const film = [
     goto: "https://drive.google.com/file/d/1oBFdKGlHGUXrXndMmtoKFkLKddaIC8SQ/view",
   },
   {
-    id: 3,
+    id: 5,
     title: "Happiness",
     artist: "Short Film Remake",
     producers: "Franco Cuatto",
     type: "Short Film",
     coverImage: "../sections/film/happiness.jpeg",
-    goto: "https://drive.google.com/file/d/1DgQYnsCEiMKPAAlOs7saFRTxoCC8YzAD/view",
+    goto: "https://drive.google.com/file/d/170mrx_nf_M-AruRE_r9ctk3ZoybuQIIy/view",
   },
 ];
