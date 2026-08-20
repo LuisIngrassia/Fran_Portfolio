@@ -38,7 +38,7 @@ const Sections = () => {
       title: "Sessionist",
       description:
         "The art of creating music that enhances emotions. The key to making stories felt, lived, and remembered forever.",
-      imgUrl: "/fotos/sesionist.jpg",
+      imgUrl: "/fotos/franbata.jpeg",
       hacia: "sections#session",
     },
   ];
